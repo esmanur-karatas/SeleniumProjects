@@ -1,0 +1,44 @@
+=== SYNCHRONİZATİON (SENKRONİZASYON) ====
+
+1-) Implicit Wait
+    * Selenium’da Implicit Wait, web sürücüsüne "No Such Element Exception (Ben elementi bulamadım)" oluşturmadan önce belirli bir süre beklemesini söylemek için kullanılır. Varsayılan ayar 0'dır.
+    * Elementi bulduğu an driver yoluna devam eder.
+    * Süreyi belirledikten sonra, web sürücüsü bir exception atmadan önce bu süreyi bekleyecektir.
+    * Syntax: driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    ==> yukarıdaki komutta 10 sn bekle eğer buradaki elementi bulamadıysan o zaman hata ver dedik yani Thread.sleep yerine bu ve aşağıdaki şekillerde kullanmak daha doğru.
+
+2-) Explicit Wait
+    * Beklenen bir durum (expected condition) olduğunda veya "ElementNotVisibleException" exception'ı atmadan önce belirlenen maksimum süreyi beklemesini söylemek için Explicit Wait kullanılır.
+    * Syntax: new WebDriverWait(driver, Duration.ofSeconds(3))
+        .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3"))
+    ==> max 3 sn ye bekle elementimiz tıklanabilir olana kadar bekle 3 sn içinde tıklanabilir olmazsa hata fırlat.
+    * Bu şekilde de kullanabiliriz:
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSecond(3));
+    wait.until(ExpectedConditions.typeofExpectedCondition(By.locator("valueoflocator")));
+
+** Expected Condition Çeşitleri
+   * visibilityOfElementLocated()
+   * presenceOfElementLocated()
+   * elementToBeClickable()
+   * visibilityOf()
+   * invisibilityOfElementLocated()
+   * textToBePresentInElement()
+   * textToBePresentInElementLocated()
+   * frameToBeAvailableAndSwitchToIt()
+   * stalenessOf()
+   * alertIsPresent()
+
+3-) Fluent Wait, Selenium'da kullanılan bir bekleme türüdür. Bu, belirli bir süre boyunca, belirli aralıklarla bir koşulu kontrol etmeyi sağlar. Koşul sağlandığı anda işlem yapılır. Fluent Wait, genellikle daha esnek bir bekleme çözümü sağlar çünkü kullanıcılar bekleme süresini ve kontrol aralıklarını belirleyebilirler. Ayrıca, belirli bir hata durumunda (örneğin, NoSuchElementException) işlem yapılmasını engelleyebilirsiniz.
+
+    Örnek Kullanım:
+
+    java
+    Kodu kopyala
+    Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+        .withTimeout(Duration.ofSeconds(30)) // Maksimum bekleme süresi
+        .pollingEvery(Duration.ofSeconds(5)) // Kontrol aralığı
+        .ignoring(NoSuchElementException.class); // Belirtilen hata tiplerini yoksay
+
+    WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("myElement")));
+    Bu örnekte, Fluent Wait, belirtilen element görünür olana kadar her 5 saniyede bir kontrol eder ve 30 saniye boyunca bekler. Eğer NoSuchElementException hatası alırsa, bu hata göz ardı edilir.
+
