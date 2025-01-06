@@ -43,9 +43,8 @@ Bu proje, Selenium WebDriver kullanarak iframe (Inline Frame) elemanları ile et
 ## 🤝 Katkıda Bulunma
 Her türlü katkıya açığız! Sorularınız veya geliştirme önerileriniz için lütfen iletişime geçin.
 
-**📧 İletişim:** example@email.com
+**📧 İletişim:** esmanurkaratas0@email.com
 
 ---
 
-**Hazırlayan:** *[Adınız]*  
-**Tarih:** *[Tarih]*
+**Hazırlayan:** *[Esmanur Karataş]*  
