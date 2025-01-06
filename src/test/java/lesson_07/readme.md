@@ -1,4 +1,4 @@
-#Selenium Dropdown Kullanımı
+# Selenium Dropdown Kullanımı
 
 -Bu proje, Selenium WebDriver kullanarak bir dropdown (açılır menü) öğesinin nasıl seçileceğini ve tüm seçeneklerinin nasıl alınacağını gösteren bir Java uygulamasıdır.
 
