@@ -68,14 +68,11 @@ Bu proje, Selenium WebDriver kullanarak JavaScript alertlerine (pop-up mesajlar�
 3. Projeyi bir IDE (IntelliJ IDEA, Eclipse vb.) ile açın.
 4. Her bir dosyayı (AlertButton1.java, AlertButton2.java, AlertButton3.java) ayrı ayrı çalıştırarak çıktılarını gözlemleyin.
 
-## 📄 Kaynaklar
-- [Selenium Resmi Dokümantasyonu](https://www.selenium.dev/documentation/en/)
-- [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
 
 ## 🤝 Katkıda Bulunma
 Her türlü katkıya açığız! Sorularınız veya geliştirme önerileriniz için lütfen iletişime geçin.
 
-**📧 İletişim:** example@email.com
+**📧 İletişim:** esmanurkaratas0@email.com
 
 --- 
 
