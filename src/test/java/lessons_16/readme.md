@@ -60,9 +60,6 @@ Bu proje, Selenium WebDriver'da farklı bekleme türlerini kullanmayı gösterir
 4. `ExplicitlyWait.java`, `FluentWaitt.java` veya `ImplicitlyWait.java` sınıflarından birini çalıştırarak beklemelerin nasıl çalıştığını gözlemleyin.
 5. Scriptler, bir tarayıcıyı otomatikleştirerek Amazon Türkiye'de "iPhone" araması yapacak ve gerekli beklemeleri sağlayacaktır.
 
-## 📄 Kaynaklar
-- [Selenium WebDriver Dokümantasyonu](https://www.selenium.dev/documentation/)
-- [Java Time API Belgeleri](https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html)
 
 ## 🤝 Katkıda Bulunma
 Katkılarınız bekleniyor! Herhangi bir sorunuz veya öneriniz varsa, bizimle iletişime geçebilirsiniz.
